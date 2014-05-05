@@ -1,0 +1,609 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{9d9e2d22-065b-48cb-8700-8888e784e4cd}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{2ae2ae37-5303-4e55-8a2d-b9b263e6ebe9}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rwmapmaker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_rwmapmaker.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_rwmapmaker.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_rwmapmaker.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_gradienteditor.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_gradienteditor.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_GraphicsItems.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_GraphicsItems.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Importer.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Importer.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_LoadingDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_LoadingDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_map.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_map.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_preferences.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_preferences.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qtcolorpicker.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qtcolorpicker.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qtcolorpicker_p.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qtcolorpicker_p.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_routebrowser.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_routebrowser.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_routefiledialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_routefiledialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_rwlocations.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_rwlocations.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_savepngfiledialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_savepngfiledialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_serzfile.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_serzfile.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_splashscreen.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_splashscreen.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="asset.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="blueprint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ColourMapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GColour.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GradGGR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gradienteditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsItems.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Importer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadingDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadRouteEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Network.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="preferences.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qtcolorpicker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qtcolorpicker_p.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="routebrowser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="routefiledialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rwlocations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rwtexture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveExcel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="savepngfiledialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveSVGnPNG.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneryitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="serzfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="splashscreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="terrainarray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TileMaps.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_rwmapmaker.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="asset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="blueprint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ColourMapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="crypt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GColour.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GradGGR.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadRouteEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Network.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="range.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RWPosition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rwtexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneryitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TangentPair.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="terrainarray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TileMaps.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_GradientEditor.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_MessageLog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_preferences.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_routebrowser.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_splashscreen.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rwtracks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="rwmapmaker.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="rwmapmaker.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="rwmapmaker.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gradienteditor.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GraphicsItems.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Importer.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="LoadingDialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="map.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MapWidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="preferences.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qtcolorpicker.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qtcolorpicker_p.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="routebrowser.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="routefiledialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="rwlocations.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="savepngfiledialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="serzfile.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="splashscreen.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="GradientEditor.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MessageLog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="preferences.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="routebrowser.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="splashscreen.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MapMakerPersp-ico.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\RouteNoIcon-ico.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\asia.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\australia.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\africa.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\europe.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\southamerica.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\northamerica.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\basemap.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\arrow_left.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\arrow_out.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\arrow_right.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\book_picture.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\bug.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\cancel.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\canvas_size.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\chart_bar.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\chart_curve.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\cursor.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\download_for_windows.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\error.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\exclamation.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\export_excel.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\eye.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\factory.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\file_extension_png.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\folder.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\folder_add.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\folder_explore.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\folder_find.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\grid.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\hand_point_090.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\hourglass.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\house.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\hslider.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\information.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\interface_preferences.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\layers.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\layers_map.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\lorry_flatbed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\magnifier.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\magnifier_zoom_in.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\magnifier_zoom_out.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\map.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\map_add.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\map_delete.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\map_edit.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\map_go.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\map_magnify.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\picture.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\printer.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\save_as.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\select.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Signpost.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Support.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\table_heatmap.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Tools.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\tree.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\update.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\vector.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\world.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\world_go.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\zoom_extend.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\magnifier_height.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\magnifier_width.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\show_assets.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\show_assets_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\show_grid.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\show_roads.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\show_scale.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\show_track.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\show_origin.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\show_terrain.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\file_extension_svg.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\MapMakerSplash.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\leftright.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\Screenshot2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RWMapMaker.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

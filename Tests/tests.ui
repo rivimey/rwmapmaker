@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TestsClass</class>
+ <widget class="QMainWindow" name="TestsClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>792</width>
+    <height>324</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Tests</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QxtMultispanSlider" name="routeMarkers" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>775</width>
+      <height>40</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QxtMultispanSlider" name="colourMarkers" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>775</width>
+      <height>40</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QxtGradientBar" name="gradientWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>775</width>
+      <height>40</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>792</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QxtGradientBar</class>
+   <extends>QWidget</extends>
+   <header location="global">qxtgradientbar.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QxtMultispanSlider</class>
+   <extends>QWidget</extends>
+   <header location="global">qxtmultispanslider.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="tests.qrc"/>
+ </resources>
+ <connections/>
+</ui>

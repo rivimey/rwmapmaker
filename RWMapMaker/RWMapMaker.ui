@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RWMapMakerClass</class>
+ <widget class="QMainWindow" name="RWMapMakerClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1070</width>
+    <height>825</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>RWMapMaker</string>
+  </property>
+  <widget class="MapWidget" name="map"/>
+  <widget class="QMenuBar" name="menuTBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1070</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actBrowseRoutes"/>
+    <addaction name="actOpenRoute"/>
+    <addaction name="separator"/>
+    <addaction name="actSaveAsPNG"/>
+    <addaction name="actSaveAsSVG"/>
+    <addaction name="actSaveAsExcel"/>
+    <addaction name="separator"/>
+    <addaction name="actExit"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <widget class="QMenu" name="menuShowGrid">
+     <property name="title">
+      <string>Grid Tile Type</string>
+     </property>
+     <addaction name="actShowTrackGrid"/>
+     <addaction name="actShowTerrainGrid"/>
+    </widget>
+    <addaction name="actZoomIn"/>
+    <addaction name="actZoomOut"/>
+    <addaction name="actZoomWidth"/>
+    <addaction name="actZoomHeight"/>
+    <addaction name="actZoomAll"/>
+    <addaction name="separator"/>
+    <addaction name="actShowTrack"/>
+    <addaction name="actShowRoads"/>
+    <addaction name="actShowTerrain"/>
+    <addaction name="actShowScenery"/>
+    <addaction name="actShowGrid"/>
+    <addaction name="actShowOrigin"/>
+    <addaction name="actGridAddresses"/>
+    <addaction name="separator"/>
+    <addaction name="actShowMapScale"/>
+    <addaction name="menuShowGrid"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actRWMapMakerWebsite"/>
+    <addaction name="actAboutRWMapMaker"/>
+    <addaction name="actAboutQt"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <widget class="QMenu" name="menuLoad_Colourmap">
+     <property name="title">
+      <string>Load Colourmap</string>
+     </property>
+     <addaction name="actCMapBrowse"/>
+    </widget>
+    <addaction name="actPanMoveMap"/>
+    <addaction name="actSelectRegion"/>
+    <addaction name="separator"/>
+    <addaction name="menuLoad_Colourmap"/>
+    <addaction name="actColourmapEditor"/>
+    <addaction name="separator"/>
+    <addaction name="actPreferences"/>
+   </widget>
+   <widget class="QMenu" name="menuWindows">
+    <property name="title">
+     <string>Windows</string>
+    </property>
+    <widget class="QMenu" name="menuLogging">
+     <property name="title">
+      <string>Logging</string>
+     </property>
+     <addaction name="actDebugLevel"/>
+     <addaction name="actInfoLevel"/>
+     <addaction name="actWarningLevel"/>
+    </widget>
+    <addaction name="actShowMessagesDock"/>
+    <addaction name="menuLogging"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuView"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuWindows"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="saveLoadBar">
+   <property name="windowTitle">
+    <string>Route Tools</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actBrowseRoutes"/>
+   <addaction name="actOpenRoute"/>
+   <addaction name="separator"/>
+   <addaction name="actSaveAsPNG"/>
+   <addaction name="actSaveAsSVG"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="showToolbar">
+   <property name="windowTitle">
+    <string>Show Tools</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actShowTrack"/>
+   <addaction name="actShowRoads"/>
+   <addaction name="actShowTerrain"/>
+   <addaction name="actShowGrid"/>
+   <addaction name="actShowScenery"/>
+   <addaction name="actShowOrigin"/>
+  </widget>
+  <widget class="QToolBar" name="zoomToolbar">
+   <property name="windowTitle">
+    <string>Zoom Tools</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+   <addaction name="actZoomIn"/>
+   <addaction name="actZoomOut"/>
+   <addaction name="actZoomWidth"/>
+   <addaction name="actZoomHeight"/>
+   <addaction name="actZoomAll"/>
+  </widget>
+  <widget class="QDockWidget" name="dockLoggerWidget">
+   <property name="windowTitle">
+    <string>Messages</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QFrame" name="verticalLayoutWidget">
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="lineWidth">
+     <number>1</number>
+    </property>
+    <property name="midLineWidth">
+     <number>0</number>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QPlainTextEdit" name="loggerText">
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="undoRedoEnabled">
+        <bool>false</bool>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="maximumBlockCount">
+        <number>3999</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolToolbar">
+   <property name="windowTitle">
+    <string>Mouse Tools</string>
+   </property>
+   <property name="toolTip">
+    <string>Tools to select and zoom in the map</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actPanMoveMap"/>
+   <addaction name="actSelectRegion"/>
+  </widget>
+  <widget class="QToolBar" name="terrainToolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actOpenRoute">
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/folder.png</normaloff>:/RWMapMaker/Resources/folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open Route...</string>
+   </property>
+   <property name="toolTip">
+    <string>Open a specific RouteProperties file...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actSaveAsPNG">
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/file_extension_png.png</normaloff>:/RWMapMaker/Resources/file_extension_png.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save As PNG...</string>
+   </property>
+   <property name="toolTip">
+    <string>Export the map to a PNG (photo) graphics file</string>
+   </property>
+  </action>
+  <action name="actSaveAsSVG">
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/file_extension_svg.png</normaloff>:/RWMapMaker/Resources/file_extension_svg.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save As SVG...</string>
+   </property>
+   <property name="toolTip">
+    <string>Export the map as an SVG vector graphics file</string>
+   </property>
+  </action>
+  <action name="actExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actAboutRWMapMaker">
+   <property name="text">
+    <string>About RWMapMaker</string>
+   </property>
+  </action>
+  <action name="actAboutQt">
+   <property name="text">
+    <string>About Qt</string>
+   </property>
+  </action>
+  <action name="actZoomIn">
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/magnifier_zoom_in.png</normaloff>:/RWMapMaker/Resources/magnifier_zoom_in.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom In</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom In to Map (show more detail)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+=</string>
+   </property>
+  </action>
+  <action name="actZoomOut">
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/magnifier_zoom_out.png</normaloff>:/RWMapMaker/Resources/magnifier_zoom_out.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom Out</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom Out of Map (show more of it)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+-</string>
+   </property>
+  </action>
+  <action name="actZoomAll">
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/zoom_extend.png</normaloff>:/RWMapMaker/Resources/zoom_extend.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom All</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom out to view the whole map</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+0</string>
+   </property>
+  </action>
+  <action name="actZoomWidth">
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/magnifier_width.png</normaloff>:/RWMapMaker/Resources/magnifier_width.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom Width</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom to show the whole map's width</string>
+   </property>
+  </action>
+  <action name="actZoomHeight">
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/magnifier_height.png</normaloff>:/RWMapMaker/Resources/magnifier_height.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom Height</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom to show the whole map's height</string>
+   </property>
+  </action>
+  <action name="actShowTrack">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/show_track.png</normaloff>:/RWMapMaker/Resources/show_track.png</iconset>
+   </property>
+   <property name="text">
+    <string>Track</string>
+   </property>
+   <property name="toolTip">
+    <string>Show rail tracks</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actShowRoads">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/show_roads.png</normaloff>:/RWMapMaker/Resources/show_roads.png</iconset>
+   </property>
+   <property name="text">
+    <string>Roads</string>
+   </property>
+   <property name="toolTip">
+    <string>Show roads</string>
+   </property>
+  </action>
+  <action name="actShowTerrain">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/show_terrain.png</normaloff>:/RWMapMaker/Resources/show_terrain.png</iconset>
+   </property>
+   <property name="text">
+    <string>Terrain</string>
+   </property>
+   <property name="toolTip">
+    <string>Show terrain as a height-map</string>
+   </property>
+  </action>
+  <action name="actShowTrackGrid">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Grid of Track Tiles</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Grid shows Track tiles</string>
+   </property>
+  </action>
+  <action name="actShowTerrainGrid">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Grid of Terrain Tiles</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Grid shows Terrain tiles</string>
+   </property>
+  </action>
+  <action name="actShowOrigin">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/show_origin.png</normaloff>:/RWMapMaker/Resources/show_origin.png</iconset>
+   </property>
+   <property name="text">
+    <string>Origin</string>
+   </property>
+   <property name="toolTip">
+    <string>Show route origin as a cross</string>
+   </property>
+  </action>
+  <action name="actColourmapEditor">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/table_heatmap.png</normaloff>:/RWMapMaker/Resources/table_heatmap.png</iconset>
+   </property>
+   <property name="text">
+    <string>Colourmap Editor</string>
+   </property>
+   <property name="toolTip">
+    <string>The Terrain height colour map Editor</string>
+   </property>
+  </action>
+  <action name="actPreferences">
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/Tools.png</normaloff>:/RWMapMaker/Resources/Tools.png</iconset>
+   </property>
+   <property name="text">
+    <string>Preferences</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actRouteCache">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Route Cache</string>
+   </property>
+  </action>
+  <action name="actShowGrid">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/show_grid.png</normaloff>:/RWMapMaker/Resources/show_grid.png</iconset>
+   </property>
+   <property name="text">
+    <string>Grid</string>
+   </property>
+   <property name="toolTip">
+    <string>Show the tile grid</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+G</string>
+   </property>
+  </action>
+  <action name="actGridAddresses">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Grid Coordinates</string>
+   </property>
+   <property name="iconText">
+    <string>Show Tile Coords</string>
+   </property>
+   <property name="toolTip">
+    <string>Show grid tile coordinates</string>
+   </property>
+  </action>
+  <action name="actBrowseRoutes">
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/world.png</normaloff>:/RWMapMaker/Resources/world.png</iconset>
+   </property>
+   <property name="text">
+    <string>Browse Routes...</string>
+   </property>
+   <property name="toolTip">
+    <string>Locate RW installs and Browse Routes therein...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="actShowMessagesDock">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Messages</string>
+   </property>
+  </action>
+  <action name="actDebugLevel">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Debug</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Debug log messages</string>
+   </property>
+  </action>
+  <action name="actInfoLevel">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Info</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Info log messages</string>
+   </property>
+  </action>
+  <action name="actWarningLevel">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Warnings</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Warning log messages</string>
+   </property>
+  </action>
+  <action name="actSaveAsExcel">
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/export_excel.png</normaloff>:/RWMapMaker/Resources/export_excel.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save As Excel...</string>
+   </property>
+  </action>
+  <action name="actShowScenery">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/show_assets.png</normaloff>:/RWMapMaker/Resources/show_assets.png</iconset>
+   </property>
+   <property name="text">
+    <string>Scenery</string>
+   </property>
+   <property name="toolTip">
+    <string>Show scenery location and type</string>
+   </property>
+  </action>
+  <action name="actShowMapScale">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show Map Scale</string>
+   </property>
+  </action>
+  <action name="actRouteToolbar">
+   <property name="text">
+    <string>Route</string>
+   </property>
+  </action>
+  <action name="actMapLayersToolbar">
+   <property name="text">
+    <string>Map Layers</string>
+   </property>
+  </action>
+  <action name="actZoomToolbar">
+   <property name="text">
+    <string>Zoom</string>
+   </property>
+  </action>
+  <action name="actRWMapMakerWebsite">
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/Support.png</normaloff>:/RWMapMaker/Resources/Support.png</iconset>
+   </property>
+   <property name="text">
+    <string>RWMapMaker website</string>
+   </property>
+  </action>
+  <action name="actPanMoveMap">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/hand_point_090.png</normaloff>:/RWMapMaker/Resources/hand_point_090.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pan/Move Map</string>
+   </property>
+   <property name="toolTip">
+    <string>Use mouse to Pan, Zoom or Move map around</string>
+   </property>
+  </action>
+  <action name="actSelectRegion">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="RWMapMaker.qrc">
+     <normaloff>:/RWMapMaker/Resources/select.png</normaloff>:/RWMapMaker/Resources/select.png</iconset>
+   </property>
+   <property name="text">
+    <string>Select Region</string>
+   </property>
+   <property name="toolTip">
+    <string>Select a region of the map to export</string>
+   </property>
+  </action>
+  <action name="actRegistration">
+   <property name="text">
+    <string>Registration</string>
+   </property>
+  </action>
+  <action name="actCMapBrowse">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Browse...</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MapWidget</class>
+   <extends>QWidget</extends>
+   <header>map.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="RWMapMaker.qrc"/>
+ </resources>
+ <connections/>
+</ui>
