@@ -84,7 +84,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>Resources/MapMakerSplash.png</pixmap>
+    <pixmap>:/RWMapMaker/Resources/MapMakerSplash.png</pixmap>
    </property>
   </widget>
   <zorder>label</zorder>

@@ -27,6 +27,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_0F7268E3585741EBB796562AD0CA881F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_16F6A5C63DE644C0929E22D61CED3D47"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -262,9 +268,29 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0F7268E3585741EBB796562AD0CA881F"
+            {
+            "SourcePath" = "8:C:\\Qt\\Qt5.2.0\\5.2.0\\msvc2010_opengl\\plugins\\platforms\\qwindows.dll"
+            "TargetName" = "8:qwindows.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_AA937533A3AC4755ADA2BB9650DF2EAA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_16F6A5C63DE644C0929E22D61CED3D47"
             {
-            "SourcePath" = "8:C:\\Qt\\Qt5.0.2\\Licenses\\LICENSE.LGPL"
+            "SourcePath" = "8:C:\\Qt\\Qt5.2.0\\5.2.0\\msvc2010_opengl\\Licenses\\LICENSE.LGPL"
             "TargetName" = "8:QT-LICENSE.LGPL"
             "Tag" = "8:"
             "Folder" = "8:_65477477E653471C99F8ADC853F486EC"
@@ -505,7 +531,7 @@
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_918A58D3ABF24619876E71918F76A289"
             {
             "SourcePath" = "8:..\\DirectXTex\\Microsoft Public License.rtf"
-            "TargetName" = "8:Microsoft Public License.rtf"
+            "TargetName" = "8:DirectXTex - Microsoft Public License.rtf"
             "Tag" = "8:"
             "Folder" = "8:_65477477E653471C99F8ADC853F486EC"
             "Condition" = "8:"
@@ -698,6 +724,17 @@
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
                     "Property" = "8:_2EBEE79897AC40848056664A82371142"
+                        "Folders"
+                        {
+                        }
+                    }
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_AA937533A3AC4755ADA2BB9650DF2EAA"
+                    {
+                    "Name" = "8:platforms"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_F2611087188A436FB21E41DCD6E46551"
                         "Folders"
                         {
                         }
