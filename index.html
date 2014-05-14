@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Rwmapmaker by rivimey</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Rwmapmaker</h1>
+        <h2>Route Map Creation for Train Simulator </h2>
+        <a href="https://github.com/rivimey/rwmapmaker" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="route-map-creation-for-train-simulator-" class="anchor" href="#route-map-creation-for-train-simulator-"><span class="octicon octicon-link"></span></a>Route Map Creation for Train Simulator </h1>
+
+<h2>
+<a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h2>
+
+<p>RWMapMaker is a tool that creates a 2D map of a Train Simulator 2013 Route on 
+your computer's monitor. The map can include a representation of the height of 
+the land, the roads and railways within the route, and the location (but not 
+detailed shape) of many of the houses, trees, factories and other structures 
+placed within the route. There are also some not-so-obvious things that can be 
+shown, including the boundaries of the tile files that are used by Train 
+Simulator 2013 to store the route, the origin, to which all coordinates are 
+referenced. You can also read off the status bar the exact location of the 
+mouse pointer of any point in the route. In this document, "Train Simulator 
+2013" and "TS2013" refer to the game program created by Railsimulator.com. 
+RWMapMaker is an independently created addon to that game. All Copyrights and 
+Trademarks belong to their respective owners. </p>
+
+<h2>
+<a name="why" class="anchor" href="#why"><span class="octicon octicon-link"></span></a>Why?</h2>
+
+<p>RWMapMaker has been created as an aid to route-building using Train 
+Simulator 2013:</p>
+
+<ul>
+<li>As a way to get an overview of the route, what has been built 
+and what is lacking;</li>
+<li>As a way to quickly locate tiles in the route (to find 
+out that "problem in tile 3,7" means a problem at Smith Junction);</li>
+<li>As a way 
+to get maps and plans for inclusion in manuals and web material;</li>
+<li>And just to see and admire what has been done!</li>
+</ul><p>As development has proceeded, some other uses have become apparent:</p>
+
+<ul>
+<li><p>It parses the Train Simulator 2013 files using an 
+independently created tools, so it can log issues that Train Simulator 2013 
+does not report, making problems easier to locate; </p></li>
+<li><p>There are opportunities to "mine" the information loaded from the route, for 
+example to visually locate objects. While this is not done in the current 
+version, it is likely to be in a subsequent version. </p></li>
+</ul><h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<p>To run RWMapMaker you will need a computer running Microsoft Windows, as is 
+true for TS2013 itself. The program has been tested on Windows 7, both 32-bit 
+and 64-bit, and should work on Windows 7, Windows 8 (Desktop mode only) and 
+Windows Server 2008. It may work on Windows XP (32-bit) but this is not 
+guaranteed or supported. </p>
+
+<h2>
+<a name="building" class="anchor" href="#building"><span class="octicon octicon-link"></span></a>Building</h2>
+
+<p>The program can be built using Visual Studio 2010 SP1, and probably with Visual
+Studio 2012. You will also need an installation of Qt for Windows 5.2 and
+the Qt Visual Studio plugin installed.</p>
+
+<p>Building the Debug variant should create an RWMapMaker executable. The Qt DLLs
+need to be available to the program - either in the PATH or in the Debug
+directory itself.</p>
+
+<p>Building the Release variant should build the RWMapMaker executable and then
+create a Setup MSI file which can install it on a remote computer. </p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>The installation MSI file is a MSI (or Microsoft Installer) file. It 
+can be installed by opening it on any current version of Windows. It will 
+prompt for an installation location in the normal “wizard” style and place
+a program start shortcut in the IvimeyCom sub-folder.</p>
+
+<p>To start RWMapMaker, invoke the program shortcut. When you do this for the 
+first time, you can chose whether to run the program in Trial mode, or to
+enter the license key you bought with the download.</p>
+
+<h2>
+<a name="operation" class="anchor" href="#operation"><span class="octicon octicon-link"></span></a>Operation</h2>
+
+<p>For details of using the program, please refer to the manual included in
+the package.</p>
+
+<h2>
+<a name="issues" class="anchor" href="#issues"><span class="octicon octicon-link"></span></a>Issues</h2>
+
+<p>There are some known issues:</p>
+
+<ul>
+<li><p>The pogram doesn't currently understand the Zip format of routes. In
+order to see such routes you have to expand the files by hand.</p></li>
+<li><p>The maths of transition curves as implemented in Train Simulator has
+so far eluded me, so they are not displayed; in consequence there are some
+gaps in the track, though in many cases surprisingly few.</p></li>
+</ul>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/rivimey/rwmapmaker/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/rivimey/rwmapmaker/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/rivimey/rwmapmaker"></a> is maintained by <a href="https://github.com/rivimey">rivimey</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
