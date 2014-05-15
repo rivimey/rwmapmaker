@@ -1,3 +1,7 @@
+# Qt
+QxtWidgets/GeneratedFiles/
+RWMapMaker/GeneratedFiles/
+
 # Compiled Object files
 *.slo
 *.lo
@@ -19,9 +23,9 @@
 *.exe
 *.out
 *.app
+
+# Debugger and Build
 *.tlog
-QxtWidgets/GeneratedFiles/
-RWMapMaker/GeneratedFiles/
 *.pdb
 *.pch
 *.lastbuildstate
@@ -29,6 +33,8 @@ RWMapMaker/GeneratedFiles/
 *.sbr
 */*/Debug/*.log
 */Debug/*.log
+*/*/Release/*.log
+*/Release/*.log
 *.idb
 *.opensdf
 *.exp
