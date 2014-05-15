@@ -43,3 +43,5 @@ RWMapMaker/GeneratedFiles/
 *.suo
 *.vcxprojResolveAssemblyReference.cache
 *.exe.intermediate.manifest
+*.ipch
+Setup/Release/Setup.msi

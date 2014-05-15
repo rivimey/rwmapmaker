@@ -440,6 +440,10 @@ void MapWidget::setOriginPen(const QPen &p)
 	originPen = new QPen(p);
 }
 
+/*!
+    Set the way track lines scale when the view changes: should they
+	change weight or not.
+ */
 void MapWidget::setTrackScaling(ViewScaling s)
 {
 	if (trackScaleMode != s)
@@ -449,6 +453,10 @@ void MapWidget::setTrackScaling(ViewScaling s)
 	}
 }
 
+/*!
+    Set the way road lines scale when the view changes: should they
+	change weight or not.
+ */
 void MapWidget::setRoadScaling(ViewScaling s)
 {
 	if (roadScaleMode != s)
@@ -610,10 +618,14 @@ void MapWidget::setFastRender(bool fast)
 	}
 }
 
+
 // Zoom related
 
-// very simple override of wheel event. Doesn't attempt to count delta() over multiple
-// events, just 
+
+/*!
+   Very simple override of wheel event. Doesn't attempt to count delta() over multiple
+   events, just 
+ */
 void MapWidget::wheelEvent(QWheelEvent * ev)
 {
 	int numDegrees = ev->delta() / 8;
@@ -648,6 +660,11 @@ void MapWidget::wheelEvent(QWheelEvent * ev)
 }
 
 
+/*!
+   Select the mode the cursor works in. Normally it's set to 'Hand'
+   so you can move and zoom the map, but it can also be 'Select' so
+   you can define an area.
+ */
 void MapWidget::setCursorMode(CursorMode cm)
 {
 	cmode = cm;
@@ -666,12 +683,19 @@ void MapWidget::setCursorMode(CursorMode cm)
 		setCursor(Qt::ArrowCursor);
 }
 
+/*!
+   Enable or disable tracking the mouse position using events.
+ */
 void MapWidget::setMouseUpdates(bool enable)
 {
 	setMouseTracking(enable);
 	mouseUpdates = enable;
 }
 
+/*!
+   Event handler used in 'Select' cursor mode to display the selection
+   rectangle.
+ */
 void MapWidget::mousePressEvent(QMouseEvent *e)
 {
 	if (cmode == Cursor_Select)
@@ -689,6 +713,10 @@ void MapWidget::mousePressEvent(QMouseEvent *e)
 	QGraphicsView::mousePressEvent(e);
 }
 
+/*!
+   Event handler used in 'Select' cursor mode to complete the selection
+   process. The selected region is set in the variable 'selectedRegion'
+ */
 void MapWidget::mouseReleaseEvent(QMouseEvent *e)
 {
 	if (cmode == Cursor_Select && rubberBand != NULL)

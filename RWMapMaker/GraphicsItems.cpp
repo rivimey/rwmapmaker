@@ -251,15 +251,6 @@ void GraphicsStraightItem::setLine(const QLineF &line)
     update();
 }
 
-//void GraphicsStraightItem::setPen(const QPen &p)
-//{
-//    if (thePen == p)
-//        return;
-//    prepareGeometryChange();
-//    thePen = p;
-//    update();
-//}
-
 QPainterPath GraphicsStraightItem::shape() const
 {
 	QPainterPath path;
@@ -295,7 +286,7 @@ QRectF GraphicsStraightItem::boundingRect() const
 }
 
 /*
-             **************** Straight Lines **************** 
+             **************** Simple Curves **************** 
 */
 
 void GraphicsEllipseItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
@@ -316,24 +307,6 @@ void GraphicsEllipseItem::setRect(const QRectF &rect)
     theRect = rect;
     update();
 }
-
-//void GraphicsEllipseItem::setPen(const QPen &p)
-//{
-//    if (thePen == p)
-//        return;
-//    prepareGeometryChange();
-//    thePen = p;
-//    update();
-//}
-
-//void GraphicsEllipseItem::setBrush(const QBrush &b)
-//{
-//    if (theBrush == b)
-//        return;
-//    prepareGeometryChange();
-//    theBrush = b;
-//    update();
-//}
 
 void GraphicsEllipseItem::setSpanAngle(int a)
 {
@@ -452,16 +425,6 @@ void GraphicsCurveItem::setArcLength(double alen)
     arclen = alen;
     needUpdate = true;
 }
-
-//void GraphicsCurveItem::setPen(QPen p)
-//{
-//    pen = p;
-//}
-
-//void GraphicsCurveItem::setBrush(QBrush b)
-//{
-//    brush = b;
-//}
 
 double GraphicsCurveItem::getCurvature()
 {
