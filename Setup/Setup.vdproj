@@ -290,7 +290,7 @@
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_16F6A5C63DE644C0929E22D61CED3D47"
             {
-            "SourcePath" = "8:C:\\Qt\\Qt5.2.0\\5.2.0\\msvc2010_opengl\\Licenses\\LICENSE.LGPL"
+            "SourcePath" = "8:C:\\Qt\\Qt5.2.0\\5.2.0\\msvc2010_opengl\\..\\..\\Licenses\\LICENSE.LGPL"
             "TargetName" = "8:QT-LICENSE.LGPL"
             "Tag" = "8:"
             "Folder" = "8:_65477477E653471C99F8ADC853F486EC"
